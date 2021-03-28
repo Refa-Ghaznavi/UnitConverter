@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_title_converter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Unit Converter"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_kilo_grams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Enter Kilo Gram"
+        android:textSize="30sp"
+        android:textColor="@color/colorRoundShape"
+        app:layout_constraintEnd_toEndOf="@+id/tv_title_converter"
+        app:layout_constraintStart_toStartOf="@+id/tv_title_converter"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_converter" />
+
+    <EditText
+        android:id="@+id/et_enter_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:textColor="@color/colorRoundShape"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/tv_kilo_grams"
+        app:layout_constraintStart_toStartOf="@+id/tv_kilo_grams"
+        app:layout_constraintTop_toBottomOf="@+id/tv_kilo_grams" />
+
+
+    <RelativeLayout
+        android:id="@+id/reConvert"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="8dp"
+        android:background="@drawable/ring_shape"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/et_enter_number"
+        app:layout_constraintStart_toStartOf="@+id/et_enter_number"
+        app:layout_constraintTop_toBottomOf="@+id/et_enter_number">
+
+        <TextView
+            android:id="@+id/tvEdition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:text="Click"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvEditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvEdition"
+            android:paddingLeft="16dp"
+            android:text="to"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvEditions"
+            android:text="Convert"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_pounds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Pounds"
+        android:textColor="@color/colorLightText"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/reConvert"
+        app:layout_constraintStart_toStartOf="@+id/reConvert"
+        app:layout_constraintTop_toBottomOf="@+id/reConvert" />
+
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="36sp"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/tv_pounds"
+        app:layout_constraintStart_toStartOf="@+id/tv_pounds"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pounds" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
